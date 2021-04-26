@@ -18,6 +18,8 @@
 		09BA01FD2632934A003A43FD /* FruitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA01FC2632934A003A43FD /* FruitTableViewController.swift */; };
 		09BA02002632938C003A43FD /* FruitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA01FF2632938C003A43FD /* FruitTableViewCell.swift */; };
 		09BA0203263293DF003A43FD /* FruitFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA0202263293DF003A43FD /* FruitFile.swift */; };
+		47C8CF2F2637214100C7D1FC /* bock.regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47C8CF2E2637214100C7D1FC /* bock.regular.otf */; };
+		47C8CF322637214900C7D1FC /* twicon.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47C8CF312637214900C7D1FC /* twicon.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		09BA01FC2632934A003A43FD /* FruitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitTableViewController.swift; sourceTree = "<group>"; };
 		09BA01FF2632938C003A43FD /* FruitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitTableViewCell.swift; sourceTree = "<group>"; };
 		09BA0202263293DF003A43FD /* FruitFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitFile.swift; sourceTree = "<group>"; };
+		47C8CF2E2637214100C7D1FC /* bock.regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bock.regular.otf; sourceTree = "<group>"; };
+		47C8CF312637214900C7D1FC /* twicon.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = twicon.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		09BA01CD262EC4C2003A43FD /* BulBul */ = {
 			isa = PBXGroup;
 			children = (
+				47C8CF2D2637212E00C7D1FC /* Font */,
 				09BA01CE262EC4C2003A43FD /* AppDelegate.swift */,
 				09BA01D0262EC4C2003A43FD /* SceneDelegate.swift */,
 				09BA01D4262EC4C2003A43FD /* Main.storyboard */,
@@ -80,6 +85,15 @@
 				09BA0202263293DF003A43FD /* FruitFile.swift */,
 			);
 			path = BulBul;
+			sourceTree = "<group>";
+		};
+		47C8CF2D2637212E00C7D1FC /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				47C8CF2E2637214100C7D1FC /* bock.regular.otf */,
+				47C8CF312637214900C7D1FC /* twicon.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +155,9 @@
 			files = (
 				09BA01DB262EC4C5003A43FD /* LaunchScreen.storyboard in Resources */,
 				09BA01D8262EC4C5003A43FD /* Assets.xcassets in Resources */,
+				47C8CF2F2637214100C7D1FC /* bock.regular.otf in Resources */,
 				09BA01D6262EC4C2003A43FD /* Main.storyboard in Resources */,
+				47C8CF322637214900C7D1FC /* twicon.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
