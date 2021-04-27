@@ -7,16 +7,27 @@
 
 import UIKit
 import AVKit
+import Network
 
 class MainViewController: UIViewController {
 
-    
-    @IBOutlet weak var mainImageView: UIImageView!
+    let monitor = NWPathMonitor()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//        startPlayer()
-        
-//        https://api.airtable.com/v0/appEyb6PJIhBrKOQz/Fruit?api_key=keygHTQcnAknXc3jJ&sort[][field]=rating&sort[][direction]=desc
+
+        //        startPlayer()
+
+        monitor.pathUpdateHandler = { path in
+            
+            if path.status == .satisfied {
+                print("network success")
+            }else{
+                print("no network ")
+            }
+            self.monitor.start(queue: DispatchQueue.global())
+            
+        }
     }
     
     
@@ -41,8 +52,25 @@ class MainViewController: UIViewController {
                player.play()
         }
     }
+    @IBAction func getVegetableList(_ sender: UIButton) {
+        performSegue(withIdentifier: "fetchList", sender: sender)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let controller = segue.destination as? FoodListTableViewController
+        print(sender ?? "")
+        if let button = sender as? UIButton {
+            if button.tag == 1 {
+                controller?.networkUrl = "https://api.airtable.com/v0/appEyb6PJIhBrKOQz/Vegetable?api_key=keygHTQcnAknXc3jJ&sort[][field]=name&sort[][direction]=desc"
+                controller!.coverImageName = "vegetableCoverr"
+            }else{
+                controller?.networkUrl = "https://api.airtable.com/v0/appEyb6PJIhBrKOQz/Fruit?api_key=keygHTQcnAknXc3jJ&sort[][field]=rating&sort[][direction]=desc"
+                controller!.coverImageName = "fruitCover"
+            }
+        }
+    }
     
-    
+
 
 }

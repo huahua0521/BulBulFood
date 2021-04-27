@@ -62,8 +62,8 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>twicon</string>
 		<string>bock.regular</string>
+		<string>twicon</string>
 	</array>
 </dict>
 </plist>
