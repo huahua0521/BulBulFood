@@ -19,7 +19,6 @@ class FoodListTableViewController: UITableViewController {
     struct PropertyKey {
         static let foodCell = "foodCell"
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +30,10 @@ class FoodListTableViewController: UITableViewController {
         }
       
         conerImageView.image = UIImage(named: coverImageName)
-        
-      
+
+   
     }
+   
     func setupSpinner(){
         spinner = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height:40))
         spinner.color = UIColor.black

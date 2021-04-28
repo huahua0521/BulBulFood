@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         //        startPlayer()
-
+        
         monitor.pathUpdateHandler = { path in
             
             if path.status == .satisfied {
@@ -34,13 +34,13 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
     }
- 
     var player = AVPlayer()
     var looper: AVPlayerLooper?
     func startPlayer() {
@@ -70,7 +70,4 @@ class MainViewController: UIViewController {
             }
         }
     }
-    
-
-
 }

@@ -43,7 +43,7 @@
 		091AECB62637B1220015F2FE /* SourceHanSansTC-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceHanSansTC-ExtraLight.otf"; sourceTree = "<group>"; };
 		091AECB72637B1230015F2FE /* SourceHanSansTC-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceHanSansTC-Light.otf"; sourceTree = "<group>"; };
 		091AECC22637EB520015F2FE /* twicon.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = twicon.otf; sourceTree = "<group>"; };
-		091AECC52637EECF0015F2FE /* FoodListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodListTableViewController.swift; path = BulBul/FoodListTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		091AECC52637EECF0015F2FE /* FoodListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodListTableViewController.swift; path = "BulBul/View Controllers/FoodListTableViewController.swift"; sourceTree = SOURCE_ROOT; };
 		091AECC82637F0B10015F2FE /* FoodFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFile.swift; sourceTree = "<group>"; };
 		091AECD02637F3890015F2FE /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		09BA01CB262EC4C2003A43FD /* BulBul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulBul.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,23 +73,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		091AECCC2637F2700015F2FE /* Fruit */ = {
+		091AECCC2637F2700015F2FE /* FruitDemo */ = {
 			isa = PBXGroup;
 			children = (
 				09BA01FC2632934A003A43FD /* FruitTableViewController.swift */,
 				09BA01FF2632938C003A43FD /* FruitTableViewCell.swift */,
 				09BA0202263293DF003A43FD /* FruitFile.swift */,
 			);
-			path = Fruit;
+			path = FruitDemo;
 			sourceTree = "<group>";
 		};
 		091AECCE2637F28A0015F2FE /* Customization */ = {
 			isa = PBXGroup;
 			children = (
+				091AECCC2637F2700015F2FE /* FruitDemo */,
+				47C8CF2D2637212E00C7D1FC /* Font */,
 				09BA01ED262ED632003A43FD /* CustomImage.swift */,
 				09BA01F5262EDFC5003A43FD /* CustomButton.swift */,
 			);
 			path = Customization;
+			sourceTree = "<group>";
+		};
+		0942D92C263936E600D55B60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				091AECC82637F0B10015F2FE /* FoodFile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0942D92D263936F600D55B60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				091AECD02637F3890015F2FE /* FoodTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0942D92E2639370A00D55B60 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				09BA01F1262ED9B5003A43FD /* MainViewController.swift */,
+				091AECC52637EECF0015F2FE /* FoodListTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		09BA01C2262EC4C2003A43FD = {
@@ -111,19 +138,16 @@
 		09BA01CD262EC4C2003A43FD /* BulBul */ = {
 			isa = PBXGroup;
 			children = (
-				091AECCE2637F28A0015F2FE /* Customization */,
-				47C8CF2D2637212E00C7D1FC /* Font */,
-				091AECCC2637F2700015F2FE /* Fruit */,
+				0942D92E2639370A00D55B60 /* View Controllers */,
+				0942D92D263936F600D55B60 /* Views */,
+				0942D92C263936E600D55B60 /* Model */,
 				09BA01CE262EC4C2003A43FD /* AppDelegate.swift */,
 				09BA01D0262EC4C2003A43FD /* SceneDelegate.swift */,
 				09BA01D7262EC4C5003A43FD /* Assets.xcassets */,
 				09BA01DC262EC4C5003A43FD /* Info.plist */,
 				09BA01D9262EC4C5003A43FD /* LaunchScreen.storyboard */,
 				09BA01D4262EC4C2003A43FD /* Main.storyboard */,
-				09BA01F1262ED9B5003A43FD /* MainViewController.swift */,
-				091AECC52637EECF0015F2FE /* FoodListTableViewController.swift */,
-				091AECC82637F0B10015F2FE /* FoodFile.swift */,
-				091AECD02637F3890015F2FE /* FoodTableViewCell.swift */,
+				091AECCE2637F28A0015F2FE /* Customization */,
 			);
 			path = BulBul;
 			sourceTree = "<group>";

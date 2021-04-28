@@ -24,10 +24,10 @@ class FoodTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func updateDatas(with fruit:FoodField)  {
-        foodName.text = fruit.fields.name
-        rateLabel.text =  rankingTransfer(rank: fruit.fields.rating ?? 0)
-        descriptionLabel.text = fruit.fields.description
+    func updateDatas(with food:FoodField)  {
+        foodName.text = food.fields.name
+        rateLabel.text =  rankingTransfer(rank: food.fields.rating ?? 0)
+        descriptionLabel.text = food.fields.description
         self.foodImageView.image = nil
         self.foodImageView.layer.cornerRadius = 10
         self.foodImageView.layer.shadowOffset = CGSize(width: 2, height: 2)
@@ -38,7 +38,8 @@ class FoodTableViewCell: UITableViewCell {
                                                         blue: 80.0/255.0,
                                                         alpha: 1.0).cgColor
         
-        if let imageUrl = fruit.fields.image?[0].url {
+        
+        if let imageUrl = food.fields.image?[0].url {
             URLSession.shared.dataTask(with: imageUrl) { (data, response, error) in
                 
                 if let data = data{
@@ -48,6 +49,16 @@ class FoodTableViewCell: UITableViewCell {
                 }
             }.resume()
         }
+        /*寫法２
+         fetchImage(url: (food.fields.image?[0].url)!) { (image) in
+         if let image = image{
+         DispatchQueue.main.async {
+         self.foodImageView.image = image
+         }
+         }
+         }
+         */
+        
         
     }
     
@@ -68,8 +79,19 @@ class FoodTableViewCell: UITableViewCell {
         default:
             return "⭐︎"
         }
-        
-        
-        
+    }
+    
+    
+    
+    func fetchImage(url: URL, completion: @escaping (UIImage?) -> Void) {
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let data = data,
+                let image = UIImage(data: data) {
+                completion(image)
+            } else {
+                completion(nil)
+            }
+        }
+        task.resume()
     }
 }
